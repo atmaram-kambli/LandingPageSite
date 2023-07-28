@@ -8,77 +8,78 @@ body {
     background-color: rgb(250, 243, 248);
     font-size: 18px;   
     text-align: justify;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 .head{
     background-color: rgb(208, 234, 244);
     background-image: url("../images/bg-hero-desktop.svg");
-    height: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 2% 2% 0 2%;
+
 }
 .nvbar {
-    /* position: relative; */
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* margin: 30px; */
 }
 .nvbar > img {
-    width: 14%;
-    height: 8%;
+    width: 150px;
+    height: 32px;
     margin: 10px 20px;
-    padding: 0 5px;
-}
-.logo {
-    background-color: #ffffff;
-    z-index: 1;
-}
-.nvbar  > .btn {
-    margin-right: 50px;
 }
 .btn {
     padding: 10px 35px;
     margin: 10px;
-    border-radius: 16px;
+    border-radius: 26px;
     background-color: hsl(193, 100%, 96%);
-    border-width: 1px;
+    border-width: 0px;   
     font-weight: 700;
+}
+.btn:hover {
+    border-width: 1px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
 }
 .head2 {
     display: flex;
     flex-direction: row;
     margin: 10px;
+    padding: 25px;
 }
 .textbox {
-    height: 350px;
     width: 40%;
     margin-top: 5%;
     margin-left: 20px;
     padding: 35px 15px;
-    text-align: justify;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: flex-start;
-    
+}
+.textbox > h1 {
+    margin: 15px 0;
+}
+.textbox > p {
+    margin: 15px 0;
 }
 .textbox > button {
     background-color:  rgb(242, 106, 192);
+    padding: 15px 17%;
+    margin: 15px 0;
     color: white;
     font-weight: 700;
-    margin-left: 0;
+    border: 0.5px solid #fff;
 }
 .images {
-    height: 350;
-    padding: 10px;
+    padding: 0 5% 5% 5%;
     width: 60%;
-    background-image: url("../images/illustration-mockups.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+}
+.images > img {
+    height: 100%;
+    width: 100%;
 }
 
 /* middle section */
@@ -94,14 +95,12 @@ body {
     margin: 30px;
     padding: 2% 5%;
     display: flex;
-    flex-direction: row;
 }
 .col3 {
     display: flex;
     flex-direction: row-reverse;
 }
 .textcontainer {
-    text-align: justify;
     padding: 7% 1% ;
     flex-basis: 50%;
 }
@@ -111,26 +110,20 @@ body {
 .textcontainer > p {
     padding: 5px;
 }
-.img1 {
-    flex-basis: 50%;
-    background-image: url("../images/illustration-grow-together.svg");
+.imgz {
+    width: 50%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+.img1 {
+    background-image: url("../images/illustration-grow-together.svg");
 }
 .img2 {
-    flex-basis: 50%;
     background-image: url("../images/illustration-flowing-conversation.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
 }
 .img3 {
-    flex-basis: 50%;
     background-image: url("../images/illustration-your-users.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
 }
 .col {
     width: 50%;
@@ -141,7 +134,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 70px;
+    bottom: -70px;
     background-color: rgb(250, 243, 248);
     z-index: 2;
 }
@@ -211,3 +204,63 @@ body {
     font-size: small;
 }
 
+
+/* media Quaries */
+@media  screen and (max-width: 375px) {
+    body {
+        text-align: center;
+    }
+    .head {
+        background-image: url("../images/bg-hero-mobile.svg");
+        padding: 0;
+    }
+    .head2 {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .textbox {
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        padding: 15px;
+    }
+    .images {
+        width: 100%;
+    }
+    .col2, .col3 {
+        flex-direction:column-reverse;
+        padding: 0;
+    }
+    .imgz {
+        height: 275px;
+        width: 100%;
+    }
+    .col {
+        width: 90%;
+        flex-direction: column;
+    }
+    .footer {
+        padding-top: 90px;
+        text-align: justify;
+    }
+    .footer > h1 {
+        margin-left: 35px;
+    }
+    .foot {
+        display: block;
+        text-align: justify;
+    }
+    .foot1, .foot2 {
+        display: block;
+        margin: 0;
+    }
+    .sec {
+        margin: 0;
+    }
+    .foot2 > p,ul {
+        margin: 0 8px;
+    }
+
+}
